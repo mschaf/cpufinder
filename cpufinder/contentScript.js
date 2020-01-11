@@ -1,5 +1,5 @@
 // fix this to
-let titleRegex = /(?<prefix>.+ )(?<cpu>[ELX]([357][- ])?\d{3,5}[WL]?( ?v\d)?)(?<postfix>[ @,]?.*)/
+let titleRegex = /(?<prefix>.+ )(?<cpu>[ELXIelxi]([357][- ])?\d{3,5}[WL]?( ?[vV]\d)?)(?<postfix>[ @,]?.*)/
 
 // create info box
 let infoBox = document.createElement('div')
@@ -9,7 +9,7 @@ infoBox.innerHTML = "Hallo"
 document.body.appendChild(infoBox)
 
 // get titles
-let titles = document.querySelectorAll('.s-item__title, .it-ttl, .vi-title__main, .title')
+let titles = document.querySelectorAll('.s-item__title, .it-ttl, .vi-title__main, .title, .mfe-title span')
 
 Array.from(titles).forEach((title) => {
   let titleText = title.textContent;
